@@ -1,5 +1,3 @@
-// library dart_ui_part_test;
-
 import 'package:reflectable/reflectable.dart';
 
 import 'dart:ui';
@@ -14,12 +12,12 @@ class Reflector extends Reflectable {
     invokingCapability);
 }
 
+const reflector = const Reflector();
+
 @reflector
 class ClassWithTextAlign {
   ClassWithTextAlign({this.textAlign = TextAlign.start});
   final TextAlign textAlign;
 }
-
-const reflector = const Reflector();
 
 main() {}

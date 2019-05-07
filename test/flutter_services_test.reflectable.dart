@@ -2,8 +2,8 @@
 // https://github.com/dart-lang/reflectable.
 
 import "dart:core";
-import 'part_test.dart' as prefix0;
-import 'some_type.dart' as prefix1;
+import 'flutter_services_test.dart' as prefix0;
+import 'package:flutter/src/services/text_input.dart' as prefix1;
 
 // ignore:unused_import
 import "package:reflectable/mirrors.dart" as m;
@@ -16,18 +16,26 @@ final _data = <r.Reflectable, r.ReflectorData>{
   const prefix0.Reflector(): new r.ReflectorData(
       <m.TypeMirror>[
         new r.NonGenericClassMirrorImpl(
-            r"SomeType",
-            r".SomeType",
+            r"ClassWithTextCapitalization",
+            r".ClassWithTextCapitalization",
             7,
             0,
             const prefix0.Reflector(),
-            const <int>[0, 1],
-            const <int>[2, 3, 4, 5, 6, 0],
+            const <int>[0, 2],
+            const <int>[3, 4, 5, 6, 7, 1],
             const <int>[],
             -1,
             {},
             {},
-            {r"": (b) => () => b ? new prefix1.SomeType() : null},
+            {
+              r"": (b) => (
+                      {textCapitalization =
+                          prefix1.TextCapitalization.sentences}) =>
+                  b
+                      ? new prefix0.ClassWithTextCapitalization(
+                          textCapitalization: textCapitalization)
+                      : null
+            },
             -1,
             -1,
             const <int>[-1],
@@ -35,28 +43,41 @@ final _data = <r.Reflectable, r.ReflectorData>{
             null)
       ],
       <m.DeclarationMirror>[
-        new r.MethodMirrorImpl(r"foo", 65539, 0, null, -1, -1, null,
-            const <int>[], const prefix0.Reflector(), null),
-        new r.MethodMirrorImpl(r"", 64, 0, -1, -1, -1, null, const <int>[],
+        new r.VariableMirrorImpl(r"textCapitalization", 33797, 0,
+            const prefix0.Reflector(), -1, -1, -1, null, null),
+        new r.ImplicitGetterMirrorImpl(const prefix0.Reflector(), 0, -1, -1, 1),
+        new r.MethodMirrorImpl(r"", 0, 0, -1, -1, -1, null, const <int>[0],
             const prefix0.Reflector(), null),
         new r.MethodMirrorImpl(r"==", 131074, null, -1, -1, -1, null,
-            const <int>[0], const prefix0.Reflector(), null),
+            const <int>[1], const prefix0.Reflector(), null),
         new r.MethodMirrorImpl(r"toString", 131074, null, -1, -1, -1, null,
             const <int>[], const prefix0.Reflector(), null),
         new r.MethodMirrorImpl(r"noSuchMethod", 65538, null, null, -1, -1, null,
-            const <int>[1], const prefix0.Reflector(), null),
+            const <int>[2], const prefix0.Reflector(), null),
         new r.MethodMirrorImpl(r"hashCode", 131075, null, -1, -1, -1, null,
             const <int>[], const prefix0.Reflector(), null),
         new r.MethodMirrorImpl(r"runtimeType", 131075, null, -1, -1, -1, null,
             const <int>[], const prefix0.Reflector(), null)
       ],
       <m.ParameterMirror>[
-        new r.ParameterMirrorImpl(r"other", 16390, 2, const prefix0.Reflector(),
+        new r.ParameterMirrorImpl(
+            r"textCapitalization",
+            47110,
+            2,
+            const prefix0.Reflector(),
+            -1,
+            -1,
+            -1,
+            null,
+            null,
+            null,
+            #textCapitalization),
+        new r.ParameterMirrorImpl(r"other", 16390, 3, const prefix0.Reflector(),
             null, -1, -1, null, null, null, null),
-        new r.ParameterMirrorImpl(r"invocation", 32774, 4,
+        new r.ParameterMirrorImpl(r"invocation", 32774, 5,
             const prefix0.Reflector(), -1, -1, -1, null, null, null, null)
       ],
-      <Type>[prefix1.SomeType],
+      <Type>[prefix0.ClassWithTextCapitalization],
       1,
       {
         r"==": (dynamic instance) => (x) => instance == x,
@@ -64,7 +85,7 @@ final _data = <r.Reflectable, r.ReflectorData>{
         r"noSuchMethod": (dynamic instance) => instance.noSuchMethod,
         r"hashCode": (dynamic instance) => instance.hashCode,
         r"runtimeType": (dynamic instance) => instance.runtimeType,
-        r"foo": (dynamic instance) => instance.foo
+        r"textCapitalization": (dynamic instance) => instance.textCapitalization
       },
       {},
       null,
