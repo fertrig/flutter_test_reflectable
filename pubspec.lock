@@ -329,9 +329,9 @@ packages:
   reflectable:
     dependency: "direct main"
     description:
-      path: "../reflectable"
-      relative: true
-    source: path
+      name: reflectable
+      url: "https://pub.dartlang.org"
+    source: hosted
     version: "2.0.11"
   shelf:
     dependency: transitive
