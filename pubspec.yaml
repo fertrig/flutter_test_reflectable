@@ -24,7 +24,10 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^0.1.2
   build_runner: any
-  reflectable: 2.0.11
+  reflectable:
+    git:
+      url: git@github.com:dart-lang/reflectable.git
+      ref: survive_172_may19
 
 dev_dependencies:
   flutter_test:

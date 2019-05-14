@@ -329,10 +329,12 @@ packages:
   reflectable:
     dependency: "direct main"
     description:
-      name: reflectable
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "2.0.11"
+      path: "."
+      ref: survive_172_may19
+      resolved-ref: c2711ba805e21755d4258e1717c5121737fc73eb
+      url: "git@github.com:dart-lang/reflectable.git"
+    source: git
+    version: "2.0.12"
   shelf:
     dependency: transitive
     description:

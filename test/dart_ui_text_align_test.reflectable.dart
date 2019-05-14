@@ -2,8 +2,7 @@
 // https://github.com/dart-lang/reflectable.
 
 import "dart:core";
-import 'flutter_services_test.dart' as prefix0;
-import 'package:flutter/src/services/text_input.dart' as prefix1;
+import 'dart_ui_text_align_test.dart' as prefix0;
 
 // ignore:unused_import
 import "dart:ui";
@@ -18,8 +17,8 @@ final _data = <r.Reflectable, r.ReflectorData>{
   const prefix0.Reflector(): new r.ReflectorData(
       <m.TypeMirror>[
         new r.NonGenericClassMirrorImpl(
-            r"ClassWithTextCapitalization",
-            r".ClassWithTextCapitalization",
+            r"ClassWithTextAlign",
+            r".ClassWithTextAlign",
             7,
             0,
             const prefix0.Reflector(),
@@ -30,13 +29,9 @@ final _data = <r.Reflectable, r.ReflectorData>{
             {},
             {},
             {
-              r"": (b) => (
-                      {textCapitalization =
-                          prefix1.TextCapitalization.sentences}) =>
-                  b
-                      ? new prefix0.ClassWithTextCapitalization(
-                          textCapitalization: textCapitalization)
-                      : null
+              r"": (b) => ({textAlign = TextAlign.start}) => b
+                  ? new prefix0.ClassWithTextAlign(textAlign: textAlign)
+                  : null
             },
             -1,
             -1,
@@ -45,8 +40,8 @@ final _data = <r.Reflectable, r.ReflectorData>{
             null)
       ],
       <m.DeclarationMirror>[
-        new r.VariableMirrorImpl(r"textCapitalization", 33797, 0,
-            const prefix0.Reflector(), -1, -1, -1, null, null),
+        new r.VariableMirrorImpl(r"textAlign", 17413, 0,
+            const prefix0.Reflector(), null, -1, -1, null, null),
         new r.ImplicitGetterMirrorImpl(const prefix0.Reflector(), 0, -1, -1, 1),
         new r.MethodMirrorImpl(r"", 0, 0, -1, -1, -1, null, const <int>[0],
             const prefix0.Reflector(), null),
@@ -63,23 +58,23 @@ final _data = <r.Reflectable, r.ReflectorData>{
       ],
       <m.ParameterMirror>[
         new r.ParameterMirrorImpl(
-            r"textCapitalization",
-            47110,
+            r"textAlign",
+            30726,
             2,
             const prefix0.Reflector(),
-            -1,
+            null,
             -1,
             -1,
             null,
             null,
-            prefix1.TextCapitalization.sentences,
-            #textCapitalization),
+            TextAlign.start,
+            #textAlign),
         new r.ParameterMirrorImpl(r"other", 16390, 3, const prefix0.Reflector(),
             null, -1, -1, null, null, null, null),
         new r.ParameterMirrorImpl(r"invocation", 32774, 5,
             const prefix0.Reflector(), -1, -1, -1, null, null, null, null)
       ],
-      <Type>[prefix0.ClassWithTextCapitalization],
+      <Type>[prefix0.ClassWithTextAlign],
       1,
       {
         r"==": (dynamic instance) => (x) => instance == x,
@@ -87,7 +82,7 @@ final _data = <r.Reflectable, r.ReflectorData>{
         r"noSuchMethod": (dynamic instance) => instance.noSuchMethod,
         r"hashCode": (dynamic instance) => instance.hashCode,
         r"runtimeType": (dynamic instance) => instance.runtimeType,
-        r"textCapitalization": (dynamic instance) => instance.textCapitalization
+        r"textAlign": (dynamic instance) => instance.textAlign
       },
       {},
       null,
